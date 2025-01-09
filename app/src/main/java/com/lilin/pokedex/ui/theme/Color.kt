@@ -1,4 +1,4 @@
-package com.lilin.androidcomposetemplate.ui.theme
+package com.lilin.pokedex.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

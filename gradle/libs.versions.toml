@@ -1,26 +1,27 @@
 [versions]
 agp = "8.7.3"
-kotlin = "2.0.0"
+kotlin = "2.1.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
-navigation = "2.8.3"
-lifecycleCompose = "2.8.6"
-hilt = "2.51.1"
-ktor = "3.0.2"
-ksp = "2.0.0-1.0.24"
+composeBom = "2024.12.01"
+navigation = "2.8.5"
+lifecycleCompose = "2.8.7"
+hilt = "2.54"
+ktor = "3.0.3"
+ksp = "2.1.0-1.0.29"
 serialization = "1.7.3"
 coroutines = "1.10.1"
 robolectric = "4.14.1"
-roborazzi = "1.26.0"
-junit4-android = "1.7.5"
+roborazzi = "1.38.0"
+junit4-android = "1.7.6"
 fragment-test = "1.8.5"
 detekt = "1.23.7"
-detekt-compose = "0.4.22"
+detektCompose = "0.4.22"
+hiltNavigationCompose = "1.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,11 +46,14 @@ androidx-lifecycle-viewmodel-compose = { group = "androidx.lifecycle", name = "l
 # https://developer.android.com/training/dependency-injection/hilt-android#setup
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
 # https://github.com/ktorio/ktor
 ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor" }
 ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor" }
 ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor" }
 ktor-client-okhttp = { group = "io.ktor", name = "ktor-client-okhttp", version.ref = "ktor" }
+ktor-server-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
 # https://github.com/Kotlin/kotlinx.serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serialization" }
 # https://github.com/Kotlin/kotlinx.coroutines
@@ -65,7 +69,7 @@ roborazzi-junit-rule = { group = "io.github.takahirom.roborazzi", name = "robora
 # https://mrmans0n.github.io/compose-rules/ (compose)
 # https://zenn.dev/tunacan/articles/8698330271a04c 参考
 detekt-formatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
-detekt-compose-rule = { group = "io.nlopez.compose.rules", name = "detekt", version.ref = "detekt-compose" }
+detekt-compose-rule = { group = "io.nlopez.compose.rules", name = "detekt", version.ref = "detektCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
@@ -76,4 +80,4 @@ dagger-hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hil
 kotlin-serialization-plugin = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 roborazzi-plugin = { id = "io.github.takahirom.roborazzi" }
 detekt-plugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
-
+kotlin-kapt = { id = "kotlin-kapt" }

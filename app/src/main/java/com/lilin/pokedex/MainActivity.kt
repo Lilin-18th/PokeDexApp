@@ -1,10 +1,10 @@
-package com.lilin.androidcomposetemplate
+package com.lilin.pokedex
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.lilin.androidcomposetemplate.ui.theme.AndroidComposeTemplateTheme
+import com.lilin.pokedex.ui.theme.AndroidComposeTemplateTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

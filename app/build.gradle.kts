@@ -6,14 +6,16 @@ plugins {
     alias(libs.plugins.ksp.gradle.plugin)
     alias(libs.plugins.roborazzi.plugin)
     alias(libs.plugins.detekt.plugin)
+    alias(libs.plugins.dagger.hilt.plugin)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
-    namespace = "com.lilin.androidcomposetemplate"
+    namespace = "com.lilin.pokedex"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.lilin.androidcomposetemplate"
+        applicationId = "com.lilin.pokedex"
         minSdk = 30
         targetSdk = 35
         versionCode = 1
@@ -71,11 +73,15 @@ dependencies {
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
+    implementation(libs.hilt.navigation.compose)
+    kapt(libs.hilt.android.compiler)
+    annotationProcessor(libs.hilt.android.compiler)
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.cio)
     implementation(libs.ktor.client.android)
     implementation(libs.ktor.client.okhttp)
+    implementation(libs.ktor.server.content.negotiation)
+    implementation(libs.ktor.serialization.kotlinx.json)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)

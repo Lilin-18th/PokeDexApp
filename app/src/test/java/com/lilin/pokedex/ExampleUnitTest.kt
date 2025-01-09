@@ -1,4 +1,4 @@
-package com.lilin.androidcomposetemplate
+package com.lilin.pokedex
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

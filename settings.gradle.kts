@@ -20,6 +20,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidComposeTemplate"
+rootProject.name = "PokeDexApp"
 include(":app")
  

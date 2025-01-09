@@ -1,11 +1,11 @@
-package com.lilin.androidcomposetemplate
+package com.lilin.pokedex
 
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.github.takahirom.roborazzi.RobolectricDeviceQualifiers
-import com.lilin.androidcomposetemplate.screens.FirstScreenTestView
-import com.lilin.androidcomposetemplate.screens.SecondScreenTestView
+import com.lilin.pokedex.screens.FirstScreenTestView
+import com.lilin.pokedex.screens.SecondScreenTestView
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

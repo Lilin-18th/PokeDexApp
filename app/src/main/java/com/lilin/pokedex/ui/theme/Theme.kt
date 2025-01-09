@@ -1,4 +1,4 @@
-package com.lilin.androidcomposetemplate.ui.theme
+package com.lilin.pokedex.ui.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,12 +9,12 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import com.lilin.androidcomposetemplate.ui.theme.Color.Pink40
-import com.lilin.androidcomposetemplate.ui.theme.Color.Pink80
-import com.lilin.androidcomposetemplate.ui.theme.Color.Purple40
-import com.lilin.androidcomposetemplate.ui.theme.Color.Purple80
-import com.lilin.androidcomposetemplate.ui.theme.Color.PurpleGrey40
-import com.lilin.androidcomposetemplate.ui.theme.Color.PurpleGrey80
+import com.lilin.pokedex.ui.theme.Color.Pink40
+import com.lilin.pokedex.ui.theme.Color.Pink80
+import com.lilin.pokedex.ui.theme.Color.Purple40
+import com.lilin.pokedex.ui.theme.Color.Purple80
+import com.lilin.pokedex.ui.theme.Color.PurpleGrey40
+import com.lilin.pokedex.ui.theme.Color.PurpleGrey80
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,

@@ -1,11 +1,11 @@
-package com.lilin.androidcomposetemplate
+package com.lilin.pokedex
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.lilin.androidcomposetemplate.screens.FirstScreen
-import com.lilin.androidcomposetemplate.screens.SecondScreen
+import com.lilin.pokedex.screens.FirstScreen
+import com.lilin.pokedex.screens.SecondScreen
 import kotlinx.serialization.Serializable
 
 @Composable
