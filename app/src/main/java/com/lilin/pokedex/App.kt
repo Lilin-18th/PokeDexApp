@@ -1,29 +1,32 @@
 package com.lilin.pokedex
 
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.lilin.pokedex.screens.FirstScreen
+import com.lilin.pokedex.screens.PokeDexTopScreen
 import com.lilin.pokedex.screens.SecondScreen
 import kotlinx.serialization.Serializable
 
 @Composable
 fun App() {
     val navController = rememberNavController()
+    val viewModel: MainViewModel = hiltViewModel()
 
     NavHost(
         navController = navController,
-        startDestination = SampleAppRoute.FirstScreen
+        startDestination = SampleAppRoute.PokeDexTopScreen
     ) {
-        composable<SampleAppRoute.FirstScreen> {
-            FirstScreen(
+        composable<SampleAppRoute.PokeDexTopScreen> {
+            PokeDexTopScreen(
                 onClick = {
-                    navController.navigate(SampleAppRoute.SecondScreen)
-                }
+                    navController.navigate(SampleAppRoute.PokemonDetailScreen)
+                },
+                viewModel = viewModel,
             )
         }
-        composable<SampleAppRoute.SecondScreen> {
+        composable<SampleAppRoute.PokemonDetailScreen> {
             SecondScreen(
                 onClickBack = {
                     navController.popBackStack()
@@ -35,8 +38,8 @@ fun App() {
 
 object SampleAppRoute {
     @Serializable
-    data object FirstScreen
+    data object PokeDexTopScreen
 
     @Serializable
-    data object SecondScreen
+    data object PokemonDetailScreen
 }
